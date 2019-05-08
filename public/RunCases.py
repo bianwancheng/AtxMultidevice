@@ -19,7 +19,6 @@ class RunCases:
         runner = HTMLTestReport.HTMLTestRunner(stream=fp,
                                                title=u'自动化测试报告,测试结果如下：',
                                                description=u'用例执行情况：')
-        # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='da', description='df')
         runner.run(discover)
         fp.close()
 

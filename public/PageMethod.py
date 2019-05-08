@@ -70,7 +70,6 @@ def operateDecorate():
                 # Logging.debug('raise Exception screenShot')
                 raise Exception('IMAGE:' + screenShot)
 
-        #     截图
         return operate
 
     return Decorate
@@ -95,10 +94,10 @@ def scrollByXY(driver, elementList):
 
 
 @operateDecorate()
-def clickByXY(driver, elementList):
+def clickByXY(driver, element_list):
     try:
-        driver.click(elementList[0], elementList[1])
-        Logging.success('driver click' + str(elementList) + 'success by XY')
+        driver.click(element_list[0], element_list[1])
+        Logging.success('driver click' + str(element_list) + 'success by XY')
     except Exception as e:
         raise e
 
@@ -110,12 +109,13 @@ def clickByXY(driver, elementList):
 
 
 @operateDecorate()
-def clickByText(driver, elementList):
-    try:
-        driver(text=elementList[0]).click(timeout=int(elementList[1]))
-        Logging.success('driver click' + elementList[0] + 'success by Text')
-    except Exception as e:
-        raise e
+def clickByText(driver, element_list):
+    clicked = driver(text=element_list[0]).click_exists(timeout=int(element_list[1]))  # return bool
+    if clicked:
+        driver(text=element_list[0]).click(timeout=int(element_list[1]))
+        Logging.success('driver click' + element_list[0] + 'success by Text')
+    else:
+        Logging.error('no found' + element_list[0])
 
 
 if __name__ == '__main__':

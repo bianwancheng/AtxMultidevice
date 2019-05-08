@@ -7,10 +7,10 @@ testcase:
       find_type: id
       operate_type: click
       info: 测试工具
-    - element_info: SCB_QR_SCAN1, 5
-      find_type: id
-      operate_type: click
-      info: SCB_QR_SCAN
+#    - element_info: 练习测试, 5
+#      find_type: id
+#      operate_type: click
+#      info: 练习测试
 #    - element_info: 0.9,0.891
 #      find_type: id
 #      operate_type: click

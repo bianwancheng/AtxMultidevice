@@ -1,0 +1,280 @@
+--------- beginning of main
+D/AndroidRuntime(11942): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+D/AndroidRuntime(11942): CheckJNI is OFF
+D/AndroidRuntime(11942): Calling main entry com.android.commands.pm.Pm
+I/art     (11942): System.exit called, status: 0
+I/AndroidRuntime(11942): VM exiting with result code 0.
+D/AndroidRuntime(11958): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+D/AndroidRuntime(11958): CheckJNI is OFF
+D/AndroidRuntime(11958): Calling main entry com.android.commands.pm.Pm
+I/art     (11958): System.exit called, status: 0
+I/AndroidRuntime(11958): VM exiting with result code 0.
+D/wpa_supplicant(27986): wlan0: Control interface command 'SIGNAL_POLL'
+V/WLAN_PSA(  281): NL MSG, len[4001], NL type[0x1C] WNI type[0x5900] len[35087]
+V/WLAN_PSA(  281): NL MSG, PID: 281
+D/AndroidRuntime(11973): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+D/AndroidRuntime(11973): CheckJNI is OFF
+D/AndroidRuntime(11973): Calling main entry com.android.commands.monkey.Monkey
+--------- beginning of system
+W/BroadcastQueue(  791): Skipping deliver [background] BroadcastRecord{182171d1 u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{f915436 11973 (unknown name)/2000/u-1 remote:17f5b85b}: process crashing
+I/Timeline(11973): Timeline: Activity_launch_request id:com.test.ui.activities.nihao time:43051899
+I/ActivityManager(  791): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.test.ui.activities.nihao/com.test.ui.activities.MainActivity} from uid 2000 on display 0
+V/WindowManager(  791): addAppToken: AppWindowToken{fa5a0d token=Token{194c1ca4 ActivityRecord{4d7f37 u0 com.test.ui.activities.nihao/com.test.ui.activities.MainActivity t1021}}} to stack=1 task=1021 at 0
+I/ViewRootImpl(  791): CPU Rendering VSync enable = true
+V/WindowManager(  791): Adding window Window{32745c3c u0 Starting com.test.ui.activities.nihao} at 4 of 9 (after Window{bc046b1 u0 com.verifone.scb.presentation/com.verifone.adc.presentation.view.activities.MainActivity})
+I/SurfaceFlinger(  259): FPS: 2
+D/MyApplication(11896): Add activity=com.test.ui.activities.MainActivity
+W/art     (11896): Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+I/art     (11973): System.exit called, status: 0
+I/AndroidRuntime(11973): VM exiting with result code 0.
+D/PackageUtil(11896): className=com.test.logic.service_accesser.ADCServiceAccesser
+D/UIAutomatorStub( 6033): URI: /jsonrpc/0, Method: POST, params, {NanoHttpd.QUERY_STRING=null}, files: {postData={"jsonrpc": "2.0", "id": "96499bd10a3b237953b710dfc4d350f4", "method": "waitForExists", "params": [{"mask": 1, "childOrSibling": [], "childOrSiblingSelector": [], "text": "\u6d4b\u8bd5\u5de5\u5177"}, 5000]}}
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.service_accesser.BOCServiceAccesser
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.service_accesser.CBCServiceAccesser
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.service_accesser.ICBCServiceAccesser
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.service_accesser.RKServiceAccesser
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.service_accesser.UMSServiceAccesser
+D/PackageUtil(11896): idx=-1
+W/QueryController( 6033): Could not detect idle state.
+D/PackageUtil(11896): className=com.test.logic.service_accesser.VFIServiceAccesser
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.service_accesser.interfaces.ServiceAccessInterface
+D/PackageUtil(11896): idx=10
+D/PackageUtil(11896): className=com.test.logic.service_accesser.service_accesser.ServiceAccesser
+D/PackageUtil(11896): idx=16
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.ADCServiceAccesser]
+D/ServiceTester(11896): ClassName[ADCServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.adc_modules].
+W/UiDevice( 6033): Skipping null root node for window: AccessibilityWindowInfo[id=12, type=TYPE_APPLICATION, layer=21015, bounds=Rect(0, 0 - 720, 1280), focused=true, active=true, hasParent=false, hasChildren=false]
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.BOCServiceAccesser]
+D/ServiceTester(11896): ClassName[BOCServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.boc_modules].
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.BeepTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.CardReaderTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.DeviceInfoTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.DeviceServiceTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.ICCardTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.LedTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.PinpadTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.PrinterTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.RFCardTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.ScannerTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.SwiperTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.TerminalManageTestCase
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.boc_modules.common.DeviceService
+D/PackageUtil(11896): idx=6
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.BeepTestCase]
+D/ServiceTester(11896): ModuleName[BeepTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.CardReaderTestCase]
+D/ServiceTester(11896): ModuleName[CardReaderTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.DeviceInfoTestCase]
+D/ServiceTester(11896): ModuleName[DeviceInfoTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.DeviceServiceTestCase]
+D/ServiceTester(11896): ModuleName[DeviceServiceTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.ICCardTestCase]
+D/ServiceTester(11896): ModuleName[ICCardTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.LedTestCase]
+D/ServiceTester(11896): ModuleName[LedTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.PinpadTestCase]
+D/ServiceTester(11896): ModuleName[PinpadTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.PrinterTestCase]
+D/ServiceTester(11896): ModuleName[PrinterTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.RFCardTestCase]
+D/ServiceTester(11896): ModuleName[RFCardTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.ScannerTestCase]
+D/ServiceTester(11896): ModuleName[ScannerTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.SwiperTestCase]
+D/ServiceTester(11896): ModuleName[SwiperTestCase]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.boc_modules.TerminalManageTestCase]
+D/ServiceTester(11896): ModuleName[TerminalManageTestCase]
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.CBCServiceAccesser]
+D/ServiceTester(11896): ClassName[CBCServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.cbc_modules].
+I/art     (11896): Background sticky concurrent mark sweep GC freed 11350(917KB) AllocSpace objects, 0(0B) LOS objects, 28% free, 2MB/2MB, paused 5.130ms total 16.498ms
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.ICBCServiceAccesser]
+D/ServiceTester(11896): ClassName[ICBCServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.icbc_modules].
+D/PackageUtil(11896): className=com.test.logic.testmodules.icbc_modules.ModuleExternalSerial
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.icbc_modules.ModulePinpad
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.icbc_modules.common.DeviceService
+D/PackageUtil(11896): idx=6
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.icbc_modules.ModuleExternalSerial]
+D/ServiceTester(11896): ModuleName[ModuleExternalSerial]
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.icbc_modules.ModulePinpad]
+D/ServiceTester(11896): ModuleName[ModulePinpad]
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.RKServiceAccesser]
+D/ServiceTester(11896): ClassName[RKServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.rk_modules].
+D/PackageUtil(11896): className=com.test.logic.testmodules.rk_modules.ModuleScanner
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.rk_modules.common.DeviceService
+D/PackageUtil(11896): idx=6
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.rk_modules.ModuleScanner]
+D/ServiceTester(11896): ModuleName[ModuleScanner]
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.UMSServiceAccesser]
+D/ServiceTester(11896): ClassName[UMSServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.ums_modules].
+D/ServiceTester(11896): ClassFullName[com.test.logic.service_accesser.VFIServiceAccesser]
+D/ServiceTester(11896): ClassName[VFIServiceAccesser]
+D/ServiceTester(11896): Module package path=[com.test.logic.testmodules.vfi_modules].
+D/PackageUtil(11896): className=com.test.logic.testmodules.vfi_modules.ModulePinpad
+D/PackageUtil(11896): idx=-1
+D/PackageUtil(11896): className=com.test.logic.testmodules.vfi_modules.common.DeviceService
+D/PackageUtil(11896): idx=6
+D/ServiceTester(11896): ClassName[com.test.logic.testmodules.vfi_modules.ModulePinpad]
+D/ServiceTester(11896): ModuleName[ModulePinpad]
+I/art     (11896): Background sticky concurrent mark sweep GC freed 166(30KB) AllocSpace objects, 0(0B) LOS objects, 1% free, 2MB/2MB, paused 6.723ms total 19.792ms
+I/ViewRootImpl(11896): CPU Rendering VSync enable = true
+D/OpenGLRenderer(11896): Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+D/Atlas   (11896): Validating map...
+V/WindowManager(  791): Adding window Window{18220779 u0 com.test.ui.activities.nihao/com.test.ui.activities.MainActivity} at 4 of 10 (before Window{32745c3c u0 Starting com.test.ui.activities.nihao})
+I/Adreno-EGL(11896): <qeglDrvAPI_eglInitialize:379>: EGL 1.4 QUALCOMM build: AU_LINUX_ANDROID_LA.BR.1.2.3_RB1.05.01.00.036.053_msm8909_LA.BR.1.2.3_RB1__release_AU (Ibddc658e36)
+I/Adreno-EGL(11896): OpenGL ES Shader Compiler Version: E031.25.03.04
+I/Adreno-EGL(11896): Build Date: 09/10/15 Thu
+I/Adreno-EGL(11896): Local Branch: mybranch13976726
+I/Adreno-EGL(11896): Remote Branch: quic/LA.BR.1.2.3_rb1.79
+I/Adreno-EGL(11896): Local Patches: NONE
+I/Adreno-EGL(11896): Reconstruct Branch: AU_LINUX_ANDROID_LA.BR.1.2.3_RB1.05.01.00.036.053 + 7c4888a + 22ca218 + 855d166 + 95575a0 + 4193eef + 64d916f + 88f4cbe + c272012 + 046ce63 + 9b2bddc + d5b5339 + a2bdc2f +  NOTHING
+I/OpenGLRenderer(11896): Initialized EGL, version 1.4
+D/OpenGLRenderer(11896): Enabling debug mode 0
+D/ConnectivityService(  791): requestNetwork for NetworkRequest [ id=14, legacyType=5, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+D/ConnectivityService(  791): handleRegisterNetworkRequest checking NetworkAgentInfo [WIFI () - 101]
+D/ConnectivityService(  791): sending new NetworkRequest to factories
+D/WIFI_UT (  791): got request NetworkRequest [ id=14, legacyType=5, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with score 0
+D/WIFI    (  791): got request NetworkRequest [ id=14, legacyType=5, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with score 0
+D/Ethernet(  791): got request NetworkRequest [ id=14, legacyType=5, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with score 0
+I/ActivityManager(  791): Displayed com.test.ui.activities.nihao/com.test.ui.activities.MainActivity: +1s19ms (total +1m54s450ms)
+I/Timeline(  791): Timeline: Activity_windows_visible id: ActivityRecord{4d7f37 u0 com.test.ui.activities.nihao/com.test.ui.activities.MainActivity t1021} time:43052929
+I/SurfaceFlinger(  259): FPS: 44
+I/Timeline(11896): Timeline: Activity_idle id: android.os.BinderProxy@12421135 time:43052975
+W/QueryController( 6033): Could not detect idle state.
+D/UIAutomatorStub( 6033): URI: /jsonrpc/0, Method: POST, params, {NanoHttpd.QUERY_STRING=null}, files: {postData={"jsonrpc": "2.0", "id": "6b3cb627a7d2d9da0241b2ba8b7c754a", "method": "objInfo", "params": [{"mask": 1, "childOrSibling": [], "childOrSiblingSelector": [], "text": "\u6d4b\u8bd5\u5de5\u5177"}]}}
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+W/QueryController( 6033): Could not detect idle state.
+D/UIAutomatorStub( 6033): URI: /jsonrpc/0, Method: POST, params, {NanoHttpd.QUERY_STRING=null}, files: {postData={"jsonrpc": "2.0", "id": "d65219110241f8152fe88d166792158f", "method": "click", "params": [360.0, 1089.0]}}
+D/InteractionController( 6033): clickNoSync (360, 1089)
+D/MainActivity(11896): Entry[测试工具] been clicked
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+I/Timeline(11896): Timeline: Activity_launch_request id:com.test.ui.activities.nihao time:43053359
+I/ActivityManager(  791): START u0 {cmp=com.test.ui.activities.nihao/com.test.ui.activities.other.test_tools.TestToolsActivity} from uid 10132 on display 0
+V/WindowManager(  791): addAppToken: AppWindowToken{32be803b token=Token{25f966ca ActivityRecord{3d32a235 u0 com.test.ui.activities.nihao/com.test.ui.activities.other.test_tools.TestToolsActivity t1021}}} to stack=1 task=1021 at 1
+D/audio_hw_primary(  274): start_output_stream: enter: stream(0xb82a71e0)usecase(1: low-latency-playback) devices(0x2)
+D/audio_hw_primary(  274): select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+D/hardware_info(  274): hw_info_append_hw_type : device_name = speaker
+I/soundtrigger(  274): audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 1, with Raise=0
+W/audio_hw_utils(  274): audio_extn_utils_update_stream_app_type_cfg: App type could not be selected. Falling back to default
+I/audio_hw_primary(  274): select_devices Selected apptype: 69936
+D/soundtrigger(  274): audio_extn_sound_trigger_update_stream_status: uc_id 1 of type 0 for Event 3, with Raise=0
+D/ACDB-LOADER(  274): ACDB -> send_audio_cal, acdb_id = 14, path =  0
+D/ACDB-LOADER(  274): ACDB -> send_asm_topology
+D/ACDB-LOADER(  274): ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+D/ACDB-LOADER(  274): ACDB -> send_adm_topology
+D/ACDB-LOADER(  274): ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+D/ACDB-LOADER(  274): ACDB -> send_audtable
+D/ACDB-LOADER(  274): ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+D/ACDB-LOADER(  274): ACDB -> AUDIO_SET_AUDPROC_CAL
+D/ACDB-LOADER(  274): ACDB -> send_audvoltable
+D/ACDB-LOADER(  274): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE
+D/ACDB-LOADER(  274): ACDB -> AUDIO_SET_AUDPROC_VOL_CAL
+D/ACDB-LOADER(  274): ACDB -> send_afe_cal
+D/ACDB-LOADER(  274): ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+D/ACDB-LOADER(  274): ACDB -> AUDIO_SET_AFE_CAL
+D/ACDB-LOADER(  274): ACDB -> send_hw_delay : acdb_id = 14 path = 0
+D/ACDB-LOADER(  274): ACDB -> ACDB_AVSYNC_INFO: ACDB_CMD_GET_DEVICE_PROPERTY
+I/audio_hw_utils(  274): audio_extn_utils_send_app_type_cfg app_type 69936, acdb_dev_id 14, sample_rate 48000
+D/audio_hw_primary(  274): select_devices: done
+D/MyApplication(11896): Add activity=com.test.ui.activities.other.test_tools.TestToolsActivity
+D/UIAutomatorStub( 6033): URI: /jsonrpc/0, Method: POST, params, {NanoHttpd.QUERY_STRING=null}, files: {postData={"jsonrpc": "2.0", "id": "eecf01bd0ab935e6185e3a868dd9f62b", "method": "waitForExists", "params": [{"mask": 1, "childOrSibling": [], "childOrSiblingSelector": [], "text": "\u6d4b\u8bd5\u5de5\u5177"}, 5000]}}
+W/QueryController( 6033): Could not detect idle state.
+I/ViewRootImpl(11896): CPU Rendering VSync enable = true
+V/WindowManager(  791): Adding window Window{18782cb1 u0 com.test.ui.activities.nihao/com.test.ui.activities.other.test_tools.TestToolsActivity} at 5 of 10 (after Window{18220779 u0 com.test.ui.activities.nihao/com.test.ui.activities.MainActivity})
+I/ActivityManager(  791): Displayed com.test.ui.activities.nihao/com.test.ui.activities.other.test_tools.TestToolsActivity: +132ms
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+E/AudioPolicyManager(  274): unknown stream type 13
+W/ByMatcher( 6033): Node returned null child: android.view.accessibility.AccessibilityNodeInfo@800080c8; boundsInParent: Rect(0, 0 - 720, 1280); boundsInScreen: Rect(0, 0 - 720, 1280); packageName: com.test.ui.activities.nihao; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; contentDescription: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; enabled: true; password: false; scrollable: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null]
+W/ByMatcher( 6033): Skipping null child (0 of 2)
+D/OpenGLRenderer(11896): endAllStagingAnimators on 0xb80b00c0 (RippleDrawable) with handle 0xb80a33d8
+I/Timeline(11896): Timeline: Activity_idle id: android.os.BinderProxy@1a84c7 time:43053607
+W/ByMatcher( 6033): Skipping null child (1 of 2)
+W/ByMatcher( 6033): Node returned null child: android.view.accessibility.AccessibilityNodeInfo@800080c8; boundsInParent: Rect(0, 0 - 720, 1280); boundsInScreen: Rect(0, 0 - 720, 1280); packageName: com.test.ui.activities.nihao; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; contentDescription: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; enabled: true; password: false; scrollable: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null]
+W/ByMatcher( 6033): Skipping null child (0 of 2)
+W/ByMatcher( 6033): Skipping null child (1 of 2)
+I/ServiceManager(11399): Waiting for service AtCmdFwd...
+I/Timeline(  791): Timeline: Activity_windows_visible id: ActivityRecord{3d32a235 u0 com.test.ui.activities.nihao/com.test.ui.activities.other.test_tools.TestToolsActivity t1021} time:43053885
+D/wpa_supplicant(27986): wlan0: Control interface command 'SIGNAL_POLL'
+I/ServiceManager(11399): Waiting for service AtCmdFwd...
+W/QueryController( 6033): Could not detect idle state.
+I/ServiceManager(11399): Waiting for service AtCmdFwd...
+W/QueryController( 6033): Could not detect idle state.
+D/TaskPersister(  791): removeObsoleteFile: deleting file=1020_task.xml
+D/audio_hw_primary(  274): out_standby: enter: stream (0xb82a71e0) usecase(1: low-latency-playback)
+D/soundtrigger(  274): audio_extn_sound_trigger_update_stream_status: uc_id 1 of type 0 for Event 2, with Raise=0
+D/hardware_info(  274): hw_info_append_hw_type : device_name = speaker
+I/soundtrigger(  274): audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 0, with Raise=0
+I/ServiceManager(11399): Waiting for service AtCmdFwd...
+W/QueryController( 6033): Could not detect idle state.
+V/WLAN_PSA(  281): NL MSG, len[4058], NL type[0x1C] WNI type[0x5900] len[49679]
+V/WLAN_PSA(  281): NL MSG, PID: 281
+D/wpa_supplicant(27986): wlan0: Control interface command 'SIGNAL_POLL'
+I/ServiceManager(11399): Waiting for service AtCmdFwd...
+W/QueryController( 6033): Could not detect idle state.
+W/Atfwd_Sendcmd(11399): AtCmdFwd service not published, waiting... retryCnt : 2
+W/QueryController( 6033): Could not detect idle state.

@@ -233,14 +233,14 @@ table       { font-size: 100%; }
                 innerSize: '80%',
                 name: '比例',
                 data: [
-                    ['通过', 1],
+                    ['通过', 0],
                     {
                         name: '失败',
                         y: 0,
                         sliced: true,
                         selected: true
                     },
-                    ['错误', 0]
+                    ['错误', 1]
                 ]
             }]
         }, function(c) {
@@ -375,11 +375,11 @@ function html_escape(s) {
 <div style="width: 650px; float: left;">
     <h1 style="font-family: Microsoft YaHei">自动化测试报告,测试结果如下：</h1>
     <p class='attribute'><strong>测试人员 : </strong> QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-05-08 15:07:12</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:32.394364</p>
-<p class='attribute'><strong>测试结果 : </strong> 共计 1，通过 1，失败 0，错误 0，通过率 = 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-05-08 17:50:50</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:04.947240</p>
+<p class='attribute'><strong>测试结果 : </strong> 共计 1，通过 0，失败 0，错误 1，通过率 = 0.00%</p>
 <p class='attribute'><strong>失败用例合集 : </strong> <ol style='float: left;'>无</ol></p>
-<p class='attribute'><strong>错误用例合集 : </strong> <ol style='float: left;'>无</ol></p>
+<p class='attribute'><strong>错误用例合集 : </strong> <div class='panel-default' style='float: left;'><a class='showDetail' data-toggle='collapse' href='#errorCaseOl' style='text-decoration: none;'>点击查看</a></div><ol id='errorCaseOl' class='collapse' style='float: left;'><li>test_scbQR (ServiceTester.ScbQR_test.MyTestCase)</li></ol></p>
 
     <p class='description'>用例执行情况：</p>
 </div>
@@ -391,9 +391,9 @@ function html_escape(s) {
 <div style="width: 500px; clear: both;">
 <p id='show_detail_line'>
 <a class="btn btn-primary" href='javascript:showCase(0)'>概要</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过: 1 </a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过: 0 </a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败: 0 </a>
-<a class="btn btn-warning" href='javascript:showCase(3)'>错误: 0 </a>
+<a class="btn btn-warning" href='javascript:showCase(3)'>错误: 1 </a>
 <a class="btn btn-info" href='javascript:showCase(4)'>所有: 1 </a>
 </p>
 </div>
@@ -419,95 +419,100 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='errorClass warning'>
     <td>MyTestCase</td>
     <td></td>
     <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
     <td class="text-center">1</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center">30.87秒</td>
+    <td class="text-center">3.69秒</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_Sale200</div></td>
+<tr id='et1_1' class='none'>
+    <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_scbQR</div></td>
     <td style="vertical-align: middle"></td>
     <td colspan='5' align='center'>
     
     <!--默认收起错误信息 -Findyou-->
-    <button id='btn_pt1_1' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse">  
+    <button id='btn_et1_1' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_1'>错误</button>
+    <div id='div_et1_1' class="collapse">  
 
     <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen 
-    <button id='btn_pt1_1' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_pt1_1,#div_pt1_1_screenshot'>通过</button>
-    <div id='div_pt1_1' class="collapse in"> -->
+    <button id='btn_et1_1' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_1,#div_et1_1_screenshot'>错误</button>
+    <div id='div_et1_1' class="collapse in"> -->
     
     <pre style="text-align:left">
     
-pt1_1: [34m2019-05-08 15:07:14 [Debug]:D:\pycharm\PycharmWorkSpase\AtxMultidevice[0m
-[37m2019-05-08 15:07:15 [Success]:start app success[0m
-[34m2019-05-08 15:07:15 [Debug]:D:\pycharm\PycharmWorkSpase\AtxMultidevice\yamlsTestCase\Sale200Tester\Sale200.yaml[0m
-[37m2019-05-08 15:07:15 [Success]:RunAllcase:getYaml, return:{'testinfo': {'id': 'sale200', 'title': 'sale测试200次', 'info': 'sale测试200次'}, 'testcase': [{'element_info': '0.20, 0.21', 'find_type': 'id', 'operate_type': 'click', 'info': '点击sale'}, {'element_info': '0.18, 0.52', 'find_type': 'id', 'operate_type': 'click', 'info': '点击1'}, {'element_info': '0.48, 0.62', 'find_type': 'id', 'operate_type': 'click', 'info': '点击5'}, {'element_info': '0.49, 0.94', 'find_type': 'id', 'operate_type': 'click', 'info': '点击pay'}, {'element_info': '0.52, 0.95', 'find_type': 'id', 'operate_type': 'click', 'info': '点击pay'}, {'element_info': '0.26, 0.46', 'find_type': 'id', 'operate_type': 'click', 'info': '点击银行卡'}, {'element_info': '0.30, 0.62', 'find_type': 'id', 'operate_type': 'click', 'info': '点击cancel', 'timeout': 3}, {'element_info': '0.48, 0.95', 'find_type': 'id', 'operate_type': 'click', 'info': '点击back to menu'}, {'element_info': '0.30, 0.62', 'find_type': 'id', 'operate_type': 'click', 'info': '点击cancel'}], 'check': [{'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend', 'find_type': 'id', 'check': 'default_check', 'info': '检查是否置灰'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend', 'find_type': 'id', 'check': 'default_check', 'info': '检查是否置灰'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend', 'find_type': 'id', 'operate_type': 'click', 'info': '点击每日精选恢复初始状态'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend', 'find_type': 'id', 'operate_type': 'click', 'info': '点击专属推荐恢复初始状态'}]}[0m
-[37m2019-05-08 15:07:15 [Success]:click点击sale[0m
-[37m2019-05-08 15:07:15 [Success]:driver click[0.2, 0.21]success by XY[0m
-[37m2019-05-08 15:07:16 [Success]:click点击1[0m
-[37m2019-05-08 15:07:16 [Success]:driver click[0.18, 0.52]success by XY[0m
-[37m2019-05-08 15:07:17 [Success]:click点击5[0m
-[37m2019-05-08 15:07:17 [Success]:driver click[0.48, 0.62]success by XY[0m
-[37m2019-05-08 15:07:18 [Success]:click点击pay[0m
-[37m2019-05-08 15:07:19 [Success]:driver click[0.49, 0.94]success by XY[0m
-[37m2019-05-08 15:07:20 [Success]:click点击pay[0m
-[37m2019-05-08 15:07:20 [Success]:driver click[0.52, 0.95]success by XY[0m
-[37m2019-05-08 15:07:21 [Success]:click点击银行卡[0m
-[37m2019-05-08 15:07:22 [Success]:driver click[0.26, 0.46]success by XY[0m
-[37m2019-05-08 15:07:23 [Success]:click点击cancel[0m
-[37m2019-05-08 15:07:26 [Success]:driver click[0.3, 0.62]success by XY[0m
-[37m2019-05-08 15:07:27 [Success]:click点击back to menu[0m
-[37m2019-05-08 15:07:27 [Success]:driver click[0.48, 0.95]success by XY[0m
-[37m2019-05-08 15:07:28 [Success]:click点击cancel[0m
-[37m2019-05-08 15:07:28 [Success]:driver click[0.3, 0.62]success by XY[0m
-[32m2019-05-08 15:07:29 [Info]:耗时：14.819350481033325s[0m
-第 1 case文件测试完成
-[37m2019-05-08 15:07:30 [Success]:start app success[0m
-[34m2019-05-08 15:07:30 [Debug]:D:\pycharm\PycharmWorkSpase\AtxMultidevice\yamlsTestCase\Sale200Tester\Sale200.yaml[0m
-[37m2019-05-08 15:07:30 [Success]:RunAllcase:getYaml, return:{'testinfo': {'id': 'sale200', 'title': 'sale测试200次', 'info': 'sale测试200次'}, 'testcase': [{'element_info': '0.20, 0.21', 'find_type': 'id', 'operate_type': 'click', 'info': '点击sale'}, {'element_info': '0.18, 0.52', 'find_type': 'id', 'operate_type': 'click', 'info': '点击1'}, {'element_info': '0.48, 0.62', 'find_type': 'id', 'operate_type': 'click', 'info': '点击5'}, {'element_info': '0.49, 0.94', 'find_type': 'id', 'operate_type': 'click', 'info': '点击pay'}, {'element_info': '0.52, 0.95', 'find_type': 'id', 'operate_type': 'click', 'info': '点击pay'}, {'element_info': '0.26, 0.46', 'find_type': 'id', 'operate_type': 'click', 'info': '点击银行卡'}, {'element_info': '0.30, 0.62', 'find_type': 'id', 'operate_type': 'click', 'info': '点击cancel', 'timeout': 3}, {'element_info': '0.48, 0.95', 'find_type': 'id', 'operate_type': 'click', 'info': '点击back to menu'}, {'element_info': '0.30, 0.62', 'find_type': 'id', 'operate_type': 'click', 'info': '点击cancel'}], 'check': [{'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend', 'find_type': 'id', 'check': 'default_check', 'info': '检查是否置灰'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend', 'find_type': 'id', 'check': 'default_check', 'info': '检查是否置灰'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend', 'find_type': 'id', 'operate_type': 'click', 'info': '点击每日精选恢复初始状态'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend', 'find_type': 'id', 'operate_type': 'click', 'info': '点击专属推荐恢复初始状态'}]}[0m
-[37m2019-05-08 15:07:30 [Success]:click点击sale[0m
-[37m2019-05-08 15:07:30 [Success]:driver click[0.2, 0.21]success by XY[0m
-[37m2019-05-08 15:07:31 [Success]:click点击1[0m
-[37m2019-05-08 15:07:32 [Success]:driver click[0.18, 0.52]success by XY[0m
-[37m2019-05-08 15:07:33 [Success]:click点击5[0m
-[37m2019-05-08 15:07:33 [Success]:driver click[0.48, 0.62]success by XY[0m
-[37m2019-05-08 15:07:34 [Success]:click点击pay[0m
-[37m2019-05-08 15:07:34 [Success]:driver click[0.49, 0.94]success by XY[0m
-[37m2019-05-08 15:07:35 [Success]:click点击pay[0m
-[37m2019-05-08 15:07:36 [Success]:driver click[0.52, 0.95]success by XY[0m
-[37m2019-05-08 15:07:37 [Success]:click点击银行卡[0m
-[37m2019-05-08 15:07:37 [Success]:driver click[0.26, 0.46]success by XY[0m
-[37m2019-05-08 15:07:38 [Success]:click点击cancel[0m
-[37m2019-05-08 15:07:41 [Success]:driver click[0.3, 0.62]success by XY[0m
-[37m2019-05-08 15:07:42 [Success]:click点击back to menu[0m
-[37m2019-05-08 15:07:42 [Success]:driver click[0.48, 0.95]success by XY[0m
-[37m2019-05-08 15:07:43 [Success]:click点击cancel[0m
-[37m2019-05-08 15:07:44 [Success]:driver click[0.3, 0.62]success by XY[0m
-[32m2019-05-08 15:07:45 [Info]:耗时：14.647808313369751s[0m
-第 2 case文件测试完成
+et1_1: [34m2019-05-08 17:50:52 [Debug]:D:\pycharm\PycharmWorkSpase\AtxMultidevice[0m
+[37m2019-05-08 17:50:52 [Success]:start app success[0m
+[34m2019-05-08 17:50:52 [Debug]:D:\pycharm\PycharmWorkSpase\AtxMultidevice\yamlsTestCase\ServiceTester\ScbQR.yaml[0m
+[37m2019-05-08 17:50:52 [Success]:RunAllcase:getYaml, return:{'testinfo': {'id': 'test001', 'title': '打开测试工具并关闭', 'info': '启动测试工具'}, 'testcase': [{'element_info': '测试工具, 5', 'find_type': 'id', 'operate_type': 'click', 'info': '测试工具'}], 'check': [{'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend', 'find_type': 'id', 'check': 'default_check', 'info': '检查是否置灰'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend', 'find_type': 'id', 'check': 'default_check', 'info': '检查是否置灰'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend', 'find_type': 'id', 'operate_type': 'click', 'info': '点击每日精选恢复初始状态'}, {'element_info': 'com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend', 'find_type': 'id', 'operate_type': 'click', 'info': '点击专属推荐恢复初始状态'}]}[0m
+[37m2019-05-08 17:50:52 [Success]:click测试工具[0m
+WARNING:root:-32001 Jsonrpc error: &lt;android.support.test.uiautomator.UiObjectNotFoundException&gt; data: UiSelector[TEXT=测试工具], method: objInfo, retrying in 0.5 seconds...
+WARNING:root:-32001 Jsonrpc error: &lt;android.support.test.uiautomator.UiObjectNotFoundException&gt; data: UiSelector[TEXT=测试工具], method: objInfo, retrying in 0.6 seconds...
+Traceback (most recent call last):
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\po\Page.py", line 65, in operate
+    elementList[0] = float(elementList[0])
+ValueError: could not convert string to float: '测试工具'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\public\PageMethod.py", line 64, in operate
+    func(arg, *args)
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\public\PageMethod.py", line 115, in clickByText
+    driver(text=element_list[0]).click(timeout=int(element_list[1]))
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\session.py", line 39, in _inner
+    return fn(self, *args, **kwargs)
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\session.py", line 746, in click
+    x, y = self.center(offset=offset)
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\session.py", line 763, in center
+    info = self.info
+  File "&lt;D:\environment\anconda\lib\site-packages\decorator.py:decorator-gen-6&gt;", line 2, in info
+  File "D:\environment\anconda\lib\site-packages\retry\api.py", line 74, in retry_decorator
+    logger)
+  File "D:\environment\anconda\lib\site-packages\retry\api.py", line 33, in __retry_internal
+    return f()
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\session.py", line 728, in info
+    return self.jsonrpc.objInfo(self.selector)
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\__init__.py", line 363, in __call__
+    params, http_timeout)
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\__init__.py", line 370, in jsonrpc_retry_call
+    return self.jsonrpc_call(*args, **kwargs)
+  File "D:\environment\anconda\lib\site-packages\uiautomator2\__init__.py", line 449, in jsonrpc_call
+    raise err
+uiautomator2.exceptions.UiObjectNotFoundError: -32001 Jsonrpc error: &lt;android.support.test.uiautomator.UiObjectNotFoundException&gt; data: UiSelector[TEXT=测试工具], method: objInfo
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\yamlsTestCase\ServiceTester\ScbQR_test.py", line 18, in test_scbQR
+    page.main()
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\po\Page.py", line 36, in main
+    self.operate(self.driver, self.yaml_path)
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\po\Page.py", line 83, in operate
+    clickByText(driver, elementList)
+  File "D:\pycharm\PycharmWorkSpase\AtxMultidevice\public\PageMethod.py", line 71, in operate
+    raise Exception('IMAGE:' + screenShot)
+Exception: IMAGE:20190508175055_测试工具.PNG
 
 
     </pre>
     </div>
     <td class="text-center" style="vertical-align: middle">
-    <div> </div></td>
+    <div> </br><a class="screenshot" href="javascript:void(0)" img="../img/20190508175055_测试工具.PNG">IMAGE_01</a></div></td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td colspan='2'>总计</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td>30.87秒</td>
-    <td>通过率：100.00%</td>
+    <td>3.69秒</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 

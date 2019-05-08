@@ -13,6 +13,9 @@ __author__ = 'wancheng.b'
 """
 import time
 import os
+
+from uiautomator2 import UiObjectNotFoundError
+
 from public.FileOperate import getTest_info
 from public.LogUtils import Logging
 from public.PageMethod import getYaml, clickByXY, clickByText
@@ -61,23 +64,24 @@ class PagePo:
                     # 可能出现异常的代码
                     elementList[0] = float(elementList[0])
                     elementList[1] = float(elementList[1])
-                    if 'timeout' in testcase.keys():
-                        timeout = testcase['timeout']
-                        time.sleep(timeout)
+                    # 是否设置了等待时间
+                    if 'waittime' in testcase.keys():
+                        waittime = testcase['waittime']
+                        time.sleep(waittime)
                         clickByXY(driver, elementList)
                     else:
                         clickByXY(driver, elementList)
-                    time.sleep(1)
+                        # time.sleep(1)
                 except:
                     # 出现异常后执行的代码
                     # print('element_info内容为字符串：text='', outTime=''')
-                    if 'timeout' in testcase.keys():
-                        timeout = testcase['timeout']
-                        time.sleep(timeout)
+                    if 'waittime' in testcase.keys():
+                        waittime = testcase['waittime']
+                        time.sleep(waittime)
                         clickByText(driver, elementList)
                     else:
                         clickByText(driver, elementList)
-                    time.sleep(1)
+                        # time.sleep(1)
                 else:
                     # 如果没有异常执行的代码
                     pass
@@ -98,20 +102,20 @@ class PagePo:
                 Logging.warn('没有改操作请在此添加' + os.getcwd())
                 # 每执行一个操作就会截图
             # ADB().screen_shot(self.all_result_path + '\img' + '\\' + testcase['info'] + '.png')
-            for check in checks:
-                pass
-                # 可以研究下具体有什么检查方式
-                # if check['operate_type'] == 'click':
-                #     print(check['operate_type'] + check['info'])
-                #     d(test='').click()
-                # if check['operate_type'] == 'scroll':
-                #     print(check['operate_type'] + check['info'])
-                #     pass
-                # if check['operate_type'] == 'sentkey':
-                #     print(check['operate_type'] + check['info'])
-                #     pass
-                # else:
-                #     print('没有改操作请在此添加' + os.getcwd())
+        for check in checks:
+            pass
+            # 可以研究下具体有什么检查方式
+            # if check['operate_type'] == 'click':
+            #     print(check['operate_type'] + check['info'])
+            #     d(test='').click()
+            # if check['operate_type'] == 'scroll':
+            #     print(check['operate_type'] + check['info'])
+            #     pass
+            # if check['operate_type'] == 'sentkey':
+            #     print(check['operate_type'] + check['info'])
+            #     pass
+            # else:
+            #     print('没有改操作请在此添加' + os.getcwd())
         end = time.time()
         Logging.info('耗时：' + str(end-start) + 's')
         print('第', self.num, 'case文件测试完成')
