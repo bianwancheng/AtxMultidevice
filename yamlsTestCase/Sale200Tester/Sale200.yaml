@@ -1,0 +1,60 @@
+testinfo:
+      id: sale200
+      title: sale测试200次
+      info: sale测试200次
+testcase:
+    - element_info: 0.20, 0.21
+      find_type: id
+      operate_type: click
+      info: 点击sale
+    - element_info: 0.18, 0.52
+      find_type: id
+      operate_type: click
+      info: 点击1
+    - element_info: 0.48, 0.62
+      find_type: id
+      operate_type: click
+      info: 点击5
+    - element_info: 0.49, 0.94
+      find_type: id
+      operate_type: click
+      info: 点击pay
+    - element_info: 0.52, 0.95
+      find_type: id
+      operate_type: click
+      info: 点击pay
+    - element_info: 0.26, 0.46
+      find_type: id
+      operate_type: click
+      info: 点击银行卡
+    - element_info: 0.30, 0.62
+      find_type: id
+      operate_type: click
+      info: 点击cancel
+      timeout: 3
+    - element_info: 0.48, 0.95
+      find_type: id
+      operate_type: click
+      info: 点击back to menu
+    - element_info: 0.30, 0.62
+      find_type: id
+      operate_type: click
+      info: 点击cancel
+
+check:
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      check: default_check
+      info: 检查是否置灰
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      check: default_check
+      info: 检查是否置灰
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      operate_type: click
+      info: 点击每日精选恢复初始状态
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      operate_type: click
+      info: 点击专属推荐恢复初始状态

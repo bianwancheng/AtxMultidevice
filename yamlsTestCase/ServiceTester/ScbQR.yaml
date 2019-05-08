@@ -1,0 +1,43 @@
+testinfo:
+      id: test001
+      title: 打开测试工具并关闭
+      info: 启动测试工具
+testcase:
+    - element_info: 测试工具, 5
+      find_type: id
+      operate_type: click
+      info: 测试工具
+    - element_info: SCB_QR_SCAN1, 5
+      find_type: id
+      operate_type: click
+      info: SCB_QR_SCAN
+#    - element_info: 0.9,0.891
+#      find_type: id
+#      operate_type: click
+#      info: 点击推送设置
+#    - element_info: 0.914,0.081
+#      find_type: id
+#      operate_type: click
+#      info: 点击每日精选
+#    - element_info: 0.892,0.075
+#      find_type: id
+#      operate_type: click
+#      info: 点击专属推荐
+
+check:
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      check: default_check
+      info: 检查是否置灰
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      check: default_check
+      info: 检查是否置灰
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      operate_type: click
+      info: 点击每日精选恢复初始状态
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      operate_type: click
+      info: 点击专属推荐恢复初始状态

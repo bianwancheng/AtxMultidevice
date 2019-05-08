@@ -1,0 +1,43 @@
+testinfo:
+    - id: test001
+      title: 关闭消息推送
+      info: 启动app，进入个人设置取消推送设置的每日精选和专属推荐
+testcase:
+    - element_info: com.ximalaya.ting.android:id/tab_myspace
+      find_type: id
+      operate_type: click
+      info: 未登录/我的
+    - element_info: com.ximalaya.ting.android.main.application:id/main_myspace_title_setting
+      find_type: id
+      operate_type: click
+      info: 点击设置
+    - element_info: com.ximalaya.ting.android.main.application:id/main_tv_push_set
+      find_type: id
+      operate_type: click
+      info: 点击推送设置
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      operate_type: click
+      info: 点击每日精选
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      operate_type: click
+      info: 点击专属推荐
+
+check:
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      check: default_check
+      info: 检查是否置灰
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      check: default_check
+      info: 检查是否置灰
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_editor_recommend
+      find_type: id
+      operate_type: click
+      info: 点击每日精选恢复初始状态
+    - element_info: com.ximalaya.ting.android.main.application:id/main_sb_exclusive_recommend
+      find_type: id
+      operate_type: click
+      info: 点击专属推荐恢复初始状态
