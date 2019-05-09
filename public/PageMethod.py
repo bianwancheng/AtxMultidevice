@@ -110,13 +110,12 @@ def clickByXY(driver, element_list):
 
 @operateDecorate()
 def clickByText(driver, element_list):
-    clicked = driver(text=element_list[0]).click_exists(timeout=int(element_list[1]))  # return bool
-    if clicked:
+    if driver(text=element_list[0]).exists(timeout=5):
+        # print(driver(text=element_list[0]).exists())
         driver(text=element_list[0]).click(timeout=int(element_list[1]))
         Logging.success('driver click' + element_list[0] + 'success by Text')
     else:
-        Logging.error('no found' + element_list[0])
-
+        Logging.error('no found UI element')
 
 if __name__ == '__main__':
     '''d = u2.connect('55cac15d')

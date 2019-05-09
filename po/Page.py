@@ -50,31 +50,17 @@ class PagePo:
         testinfo = caseYaml['testinfo']
         testcases = caseYaml['testcase']
         checks = caseYaml['check']
-        start = time.time()
 
         for testcase in testcases:
+            start = time.time()
             element_info = testcase['element_info']
             elementList = element_info.split(', ')
             # print(elementList)
 
             if testcase['operate_type'] == 'click':
                 Logging.success(testcase['operate_type'] + testcase['info'])
-                # 如果可以转换成float说明是坐标，否则就是str
-                try:
-                    # 可能出现异常的代码
-                    elementList[0] = float(elementList[0])
-                    elementList[1] = float(elementList[1])
-                    # 是否设置了等待时间
-                    if 'waittime' in testcase.keys():
-                        waittime = testcase['waittime']
-                        time.sleep(waittime)
-                        clickByXY(driver, elementList)
-                    else:
-                        clickByXY(driver, elementList)
-                        # time.sleep(1)
-                except:
-                    # 出现异常后执行的代码
-                    # print('element_info内容为字符串：text='', outTime=''')
+                # 增加element_type类型，选择点击方式，坐标or text
+                if testcase['element_type'] == 'text':
                     if 'waittime' in testcase.keys():
                         waittime = testcase['waittime']
                         time.sleep(waittime)
@@ -83,11 +69,13 @@ class PagePo:
                         clickByText(driver, elementList)
                         # time.sleep(1)
                 else:
-                    # 如果没有异常执行的代码
-                    pass
-                finally:
-                    # 不管是否出现异常都会执行finally 具体放在那里是否可以和else一起用？
-                    pass
+                    if 'waittime' in testcase.keys():
+                        waittime = testcase['waittime']
+                        time.sleep(waittime)
+                        clickByXY(driver, elementList)
+                    else:
+                        clickByXY(driver, elementList)
+                        # time.sleep(1)
 
             elif testcase['operate_type'] == 'scroll':
                 Logging.success(testcase['operate_type'] + testcase['info'])
@@ -116,8 +104,8 @@ class PagePo:
             #     pass
             # else:
             #     print('没有改操作请在此添加' + os.getcwd())
-        end = time.time()
-        Logging.info('耗时：' + str(end-start) + 's')
+            end = time.time()
+        Logging.info('耗时：' + str(end - start) + 's')
         print('第', self.num, 'case文件测试完成')
 
 # if __name__ == '__main__':
