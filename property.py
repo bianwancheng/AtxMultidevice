@@ -157,21 +157,10 @@ class MyTestCase(unittest.TestCase, ADB):
         if not ADB().get_network_state():
             d.click(0.883, 0.176)
         d.session(self.package_name)
-        # d.shell('logcat -c')
-        # time.sleep(1)
 
-        # start_battery = str(ADB().get_battery_level())
-        # start_dish = str(ADB().get_disk())
-        # print('交易前电池电量：' + start_battery)
-        # print('交易前磁盘信息' + start_dish)
-        # cvs_list = []
-        # cvs_list.append(start_battery)
-        # cvs_list.append(start_dish)
         cvs_list = []
         # 单个用例执行次数
         num = 250
-        # print('交易开始时间:', time.time())
-        # allStart = time.time()
 
         for i in range(num):
             list = []
