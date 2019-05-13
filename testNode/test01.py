@@ -345,7 +345,25 @@ import uiautomator2 as u2
 
 if __name__ == '__main__':
 
-    d = u2.connect('10.172.24.71')
+    import csv
+    cvs_list =[[1, '98', 'Used:910.1M,Free:3.7G', 1557740137.8706868, 1557740149.4523964, 11.581709623336792, '98', 'Used:910.1M,Free:3.7G', 0], [2, '98', 'Used:910.1M,Free:3.7G', 1557740157.0612473, 1557740167.2717419, 10.21049451828003, '98', 'Used:910.1M,Free:3.7G', 0]]
+
+    list = [1, '98', 'Used:910.1M,Free:3.7G', 1557740137.8706868, 1557740149.4523964, 11.581709623336792, '98', 'Used:910.1M,Free:3.7G', 0]
+    with open('test1.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        print(type(list))
+        writer.writerow(cvs_list[0])
+        writer.writerow(('zhang', 15111111111, 'beijing', 33))
+        writer.writerow(('li', 13822222222, 'wuhan', 28))
+        writer.writerow(('liu', 15933333333, 'hainan', 25))
+    with open('test1.csv', 'r', newline='') as f:
+        reader = csv.reader(f)
+        for i in reader:
+            print(i)
+    # d = u2.connect('55cac15d')
+    # # d.open_quick_settings()
+    # d.app_start('com.android.settings/.Settings$WifiSettingsActivity')
+    # print(d(className='com.android.settings:id/switch_text').get_text(timeout=5))
     # start = time.time()
     # time.sleep(2)
     # end = time.time()
@@ -372,8 +390,8 @@ if __name__ == '__main__':
     # print(d.info.get('screenOn'))
     # print(d.wlan_ip)
     # print(d.device_info)
-    sess = d.session('com.test.ui.activities.nihao')
-    d(text='测试工具').click_exists(timeout=5)
+    # sess = d.session('com.test.ui.activities.nihao')
+    # d(text='测试工具').click_exists(timeout=5)
     # d(text='测试工具').click_exists(timeout=5.0)
     # bool = d(text='Skip').click_exists(timeout=5.0)
     # print(bool)

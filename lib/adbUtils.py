@@ -13,6 +13,7 @@ import time
 import os
 import random
 
+from public.LogUtils import Logging
 
 PATH = lambda p: os.path.abspath(p)
 
@@ -55,7 +56,7 @@ class ADB(object):
 
     def adb(self, args):
         cmd = "%s %s %s" % ('adb', self.device_id, str(args))
-        print(cmd)
+        Logging.debug(cmd)
         return subprocess.Popen(
             cmd,
             shell=True,
@@ -64,6 +65,7 @@ class ADB(object):
 
     def shell(self, args):
         cmd = "%s %s shell %s" % ('adb', self.device_id, str(args),)
+        Logging.debug(cmd)
         return subprocess.Popen(
             cmd,
             shell=True,
@@ -163,9 +165,9 @@ class ADB(object):
         """
         获取当前应用界面的包名和Activity，返回的字符串格式为：packageName/activityName
         """
-        out = self.shell(
+        out = str(self.shell(
             "dumpsys activity activities | %s mFocusedActivity" %
-            find_util).stdout.read().strip().split(' ')[3]
+            find_util).stdout.read().strip(), encoding='utf-8').split(' ')[3]
         return out
 
     def get_current_package_name(self):
@@ -184,8 +186,8 @@ class ADB(object):
         """
         获取电池电量
         """
-        level = self.shell("dumpsys battery | %s level" %
-                           find_util).stdout.read().split(": ")[-1]
+        level = str(self.shell("dumpsys battery | %s level" %
+                           find_util).stdout.read().strip(), encoding='utf-8').split(": ")[-1]
 
         return int(level)
 
@@ -303,8 +305,8 @@ class ADB(object):
         获取启动应用所花时间
         usage: getAppStartTotalTime("com.android.settings/.Settings")
         """
-        time = self.shell("am start -W %s | %s TotalTime" %
-                          (component, find_util)).stdout.read().split(": ")[-1]
+        time = str(self.shell("am start -W %s | %s TotalTime" %
+                          (component, find_util)).stdout.read(), encoding='utf-8').split(": ")[-1]
         return int(time)
 
     def install_app(self, app_file):
@@ -747,7 +749,7 @@ class ADB(object):
         设备是否连上互联网
         :return:
         """
-        if 'unknown' in self.shell('ping -w 1 www.baidu.com').stdout.readlines()[0]:
+        if 'unknown' in str(self.shell('ping -w 1 www.baidu.com').stdout.readlines()[0]):
             return False
         else:
             return True
@@ -765,9 +767,10 @@ class ADB(object):
                 lst = [cpu for cpu in r.split(' ') if cpu]
                 return int(lst[2].split('%', 1)[0])
 
-    def __mem_pss(self, package_name):
+    def mem_pss(self, package_name):
         """
         获取当前应用内存
+        例：adb  shell top -n 1 -d 0.5 | findstr com.verifone.scb.presentatio
         """
         p = self.shell(
             'top -n 1 -d 0.5 | %s %s' %
@@ -882,9 +885,9 @@ class ADB(object):
         :return: Used:用户占用,Free:剩余空间
         """
         for s in self.shell('df').stdout.readlines():
-            if '/mnt/shell/emulated' in s or '/storage/sdcard0' in s:
+            if '/mnt/shell/emulated' in str(s) or '/storage/sdcard0' in str(s):
                 lst = []
-                for i in s.split(' '):
+                for i in str(s.strip()).split(' '):
                     if i:
                         lst.append(i)
                 return 'Used:%s,Free:%s' % (lst[2], lst[3])
@@ -996,4 +999,11 @@ class ADB(object):
 if __name__ == "__main__":
     # adb = ADB('55cac15d').adb('install D:\pycharm\PycharmWorkSpase\Auto_Analysis-master\data\\app.apk').stdout.read()
     # ADB().start_activity('com.android.launcher3/.Launcher')
-    ADB().install_app('D:\pycharm\PycharmWorkSpase\AtxMultidevice\data\\apk\Tester_0.5.apk')
+    # ADB().install_app('D:\pycharm\PycharmWorkSpase\AtxMultidevice\data\\apk\Tester_0.5.apk')
+    # print(ADB().is_install('com.verifone.scb.presentation'))
+    # print(ADB().get_disk())
+    #  com.test.ui.activities.nihao/com.test.ui.activities.MainActivity
+    # print(ADB().get_app_start_total_time('com.test.ui.activities.nihao/com.test.ui.activities.MainActivity'))
+    # print(ADB().mem_pss('com.verifone.scb.presentation'))
+    # ADB().reset_current_app()
+    print(ADB().get_network_state())

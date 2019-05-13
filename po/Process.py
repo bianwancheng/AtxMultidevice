@@ -7,6 +7,8 @@
 # @Software  : PyCharm
 
 import os
+import subprocess
+
 from lib.adbUtils import ADB
 from po.Driver import getDevices
 from public.LogUtils import Logging
@@ -24,9 +26,19 @@ class Process:
 
                 :return:
                 '''
+        # 获取连接方式
+        connect_type = getTest_info('connect_type', 'connect_type')
+        if connect_type == 'ip':
+            subprocess.Popen(['adb', 'connect', getTest_info('connect_type', 'ip')])
+        elif connect_type == 'usb':
+            subprocess.Popen(['adb', 'disconnect', getTest_info('connect_type', 'ip')])
+        else:
+            pass
+
         warnings.simplefilter('ignore', ResourceWarning)
         package_name = getTest_info('test_package_name', 'package_name')
         package_atx = getTest_info('test_package_name', 'package_atx')
+
         if not ADB().is_install(package_name):
             ADB().install_app(getTest_info('test_package_name', 'package_name_path'))
             Logging.info('install' + package_name + 'success')

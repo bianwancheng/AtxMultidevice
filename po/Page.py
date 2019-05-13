@@ -50,9 +50,10 @@ class PagePo:
         testinfo = caseYaml['testinfo']
         testcases = caseYaml['testcase']
         checks = caseYaml['check']
+        start = time.time()
+        Logging.info('start time:' + str(start))
 
         for testcase in testcases:
-            start = time.time()
             element_info = testcase['element_info']
             elementList = element_info.split(', ')
             # print(elementList)
@@ -62,20 +63,22 @@ class PagePo:
                 # 增加element_type类型，选择点击方式，坐标or text
                 if testcase['element_type'] == 'text':
                     if 'waittime' in testcase.keys():
+                        clickByText(driver, elementList)
                         waittime = testcase['waittime']
                         time.sleep(waittime)
-                        clickByText(driver, elementList)
                     else:
                         clickByText(driver, elementList)
                         # time.sleep(1)
-                else:
+                elif testcase['element_type'] == 'xy':
                     if 'waittime' in testcase.keys():
+                        clickByXY(driver, elementList)
                         waittime = testcase['waittime']
                         time.sleep(waittime)
-                        clickByXY(driver, elementList)
                     else:
                         clickByXY(driver, elementList)
-                        # time.sleep(1)
+                        time.sleep(0.5)
+                else:
+                    pass
 
             elif testcase['operate_type'] == 'scroll':
                 Logging.success(testcase['operate_type'] + testcase['info'])
@@ -104,7 +107,8 @@ class PagePo:
             #     pass
             # else:
             #     print('没有改操作请在此添加' + os.getcwd())
-            end = time.time()
+        end = time.time()
+        Logging.info('end time:' + str(end))
         Logging.info('耗时：' + str(end - start) + 's')
         print('第', self.num, 'case文件测试完成')
 

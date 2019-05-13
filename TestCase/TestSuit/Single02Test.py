@@ -13,6 +13,9 @@ class MyTestCase(unittest.TestCase):
         print('fdgd')
         # self.assertEqual(True, True)
 
+    def test_double(self):
+        print('132')
+
     def tearDown(self):
         print('test over')
 

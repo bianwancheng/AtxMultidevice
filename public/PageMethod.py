@@ -96,7 +96,7 @@ def scrollByXY(driver, elementList):
 @operateDecorate()
 def clickByXY(driver, element_list):
     try:
-        driver.click(element_list[0], element_list[1])
+        driver.click(float(element_list[0]), float(element_list[1]))
         Logging.success('driver click' + str(element_list) + 'success by XY')
     except Exception as e:
         raise e
