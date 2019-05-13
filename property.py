@@ -109,7 +109,6 @@ class ADB(object):
 
 
 class MyTestCase(unittest.TestCase, ADB):
-
     driver = u2.connect(ADB().device_id)
     package_name = 'com.verifone.scb.presentation'
 
@@ -124,7 +123,6 @@ class MyTestCase(unittest.TestCase, ADB):
         d(resourceId="com.verifone.scb.presentation:id/et_passwd").set_text("0000")
         d.click(0.752, 0.954)
         time.sleep(2)
-
 
     # 有wifi有非接
     def test_1_Wife_CTLS_Sale250(self):
@@ -199,7 +197,6 @@ class MyTestCase(unittest.TestCase, ADB):
                 print('返回主页面从头开始')
             else:
                 break
-
 
             CPURate = ADB().get_cpu(self.package_name)
             print('CPU使用率为' + str(CPURate))
